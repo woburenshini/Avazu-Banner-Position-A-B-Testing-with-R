@@ -6,7 +6,11 @@ The **goal** of this A/B test is evaluate the click-through rate (CTR) as an imp
 
 The click-through rate of an advertisement is defined as the number of clicks on an ad divided by the number of times the ad is shown (impressions), expressed as a percentage.
 
-**Fist step data preparing**
+We collect 10 days click-through data, 
+-
++
+
+**Fist step Prepare Data**
 
 The first step of our Avazu A/B test is load raw dataset and summarize feature of interest. We use R package dplyr for table manipulation.
 
