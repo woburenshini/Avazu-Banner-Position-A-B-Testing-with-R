@@ -13,4 +13,4 @@ We collect 10 days click-through data to discover if banner position is a factor
 +
 The first step of our Avazu A/B test is load raw dataset and summarize feature of interest. We use R package dplyr for table manipulation.
 
-![alt text](http://url/to/img.png)
+![alt text](Avazu-Banner-Position-A-B-Testing-with-R/Rplot01.png)
