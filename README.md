@@ -1,4 +1,4 @@
-# Avazu-Banner-Position-A-B-Testing-with-R
+# Avazu-Banner-Position-A/B-Testing-with-R
 
 The **goal** of this A/B test is evaluate the click-through rate (CTR) as an important metric of online advertising. 
 
@@ -8,5 +8,5 @@ The click-through rate of an advertisement is defined as the number of clicks on
 
 **Fist step data preparing**
 
-The first step of our Avazu A/B test is load raw dataset and summarize feature of interest. We use dplyr for table manipulation.
+The first step of our Avazu A/B test is load raw dataset and summarize feature of interest. We use R package dplyr for table manipulation.
 
