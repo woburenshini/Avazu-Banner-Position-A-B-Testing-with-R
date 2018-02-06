@@ -1,4 +1,4 @@
-# Avazu Banner Position A/B Testing with R
+# Avazu Click-through rating A/B Testing with R
 
 The **goal** of this A/B test is evaluate the click-through rate (CTR) as an important metric of online advertising. 
 
