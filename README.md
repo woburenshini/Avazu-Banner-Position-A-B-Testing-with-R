@@ -23,6 +23,9 @@ The first step of our Avazu A/B test is load raw dataset and summarize feature o
 
 ![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2010.40.10%20AM.png?raw=true)
 
+Let's take a look at two positions in question
+
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2010.41.44%20AM.png?raw=true)
 
 
 
