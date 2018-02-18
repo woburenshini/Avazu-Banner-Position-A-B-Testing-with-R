@@ -37,3 +37,5 @@ But is Position true probability of getting a click-through rate higher? Or is t
 
 
 ![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Rplot01.png?raw=true)
+
+**This posterior is a probabilistic representation of our uncertainty in each estimate. Thus, when asking the probability Top banner is better, we’re asking “if I drew a random draw from Top banner and a random draw from Side banner, what’s the probability Top banner is higher”? Well, notice that those two distributions does not overlap a lot. There’s enough certainty in each of those estimates that Side banner could not easily be better than Top banner.**
