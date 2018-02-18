@@ -50,7 +50,9 @@ We’d need to know the probability one beta distribution is greater than anothe
 **Simulation of posterior draws**
 If we don’t want to do any math today (I hear you), we could simply try simulation. We could use each player’s α1α1 and β1β1 parameters, draw a million items from each of them using rbeta, and compare the results:
 
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2012.46.57%20PM.png?raw=true)
 
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2012.56.08%20PM.png?raw=true)
 
 So about 98% probability Top banner is better than Side banner! An answer like this is often good enough, depending on your need for precision and the computational efficiency. You could turn up or down the number of draws depending on how much you value speed vs precision.
 
@@ -58,8 +60,13 @@ So about 98% probability Top banner is better than Side banner! An answer like t
 
 This post lays out a closed-form solution Miller derived for the probability a draw from one beta distribution is greater than a draw from another:
 
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2012.50.17%20PM.png?raw=true)
+
 This solution is slow for large αB, and not straightforward to vectorize: notice that term that iterates from 0 to αB−1. If we run A/B tests with thousands of clicks, this step is going to constrain us (though it’s still usually faster than simulation or integration).
+
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2012.56.32%20PM.png?raw=true)
 
 **Closed-form approximation**
 As this report points out, there’s a much faster approximation we can use. Notice that when αα and β are both fairly large, the beta starts looking a lot like a normal distribution, so much so that it can be closely approximated.
 
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2012.56.41%20PM.png?raw=true)
