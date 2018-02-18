@@ -21,6 +21,8 @@ Here, we’re going to look at an empirical Bayesian approach to comparing two p
 The first step of our Avazu A/B test is load raw dataset and summarize feature of interest. We use R package dplyr for table manipulation.
 
 
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Rplot01.png?raw=true)
+
 
 
 
