@@ -28,6 +28,9 @@ Let's take a look at two positions in question
 ![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2010.41.44%20AM.png?raw=true)
 
 
+We see that Position 1 has a slightly higher average (click_no/count), and a higher shrunken empirical bayes estimate ((click_no+α0)/(count+α0+β0), where α0 and β0 are our priors).
+
+But is Position true probability of getting a click-through rate higher? Or is the difference due to chance? To answer, let’s consider the actual posterior distributions- the range of plausible values for their “true” click-through averages after we’ve taken the evidence (their batting record) into account. Recall that these posterior distributions are modeled as beta distributions with the parameters Beta(α0+click_no,α0+β0+click_no+count).
 
 
 
