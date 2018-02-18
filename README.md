@@ -39,3 +39,27 @@ But is Position true probability of getting a click-through rate higher? Or is t
 ![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Rplot01.png?raw=true)
 
 **This posterior is a probabilistic representation of our uncertainty in each estimate. Thus, when asking the probability Top banner is better, we’re asking “if I drew a random draw from Top banner and a random draw from Side banner, what’s the probability Top banner is higher”? Well, notice that those two distributions does not overlap a lot. There’s enough certainty in each of those estimates that Side banner could not easily be better than Top banner.**
+
+
+**Posterior Probability**
+
+We may be interested in the probability that Top banner is better than Side banner within our model. We can already tell from the graph that it’s greater than 95%, but probably not much greater. How could we quantify it?
+
+We’d need to know the probability one beta distribution is greater than another. This question is not trivial to answer, and I’m going to illustrate four routes that are common lines of attack in a Bayesian problem:
+
+**Simulation of posterior draws**
+If we don’t want to do any math today (I hear you), we could simply try simulation. We could use each player’s α1α1 and β1β1 parameters, draw a million items from each of them using rbeta, and compare the results:
+
+
+
+So about 98% probability Top banner is better than Side banner! An answer like this is often good enough, depending on your need for precision and the computational efficiency. You could turn up or down the number of draws depending on how much you value speed vs precision.
+
+**Closed-form solution**
+
+This post lays out a closed-form solution Miller derived for the probability a draw from one beta distribution is greater than a draw from another:
+
+This solution is slow for large αB, and not straightforward to vectorize: notice that term that iterates from 0 to αB−1. If we run A/B tests with thousands of clicks, this step is going to constrain us (though it’s still usually faster than simulation or integration).
+
+**Closed-form approximation**
+As this report points out, there’s a much faster approximation we can use. Notice that when αα and β are both fairly large, the beta starts looking a lot like a normal distribution, so much so that it can be closely approximated.
+
