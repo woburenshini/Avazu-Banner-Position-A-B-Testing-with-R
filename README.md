@@ -64,9 +64,13 @@ This post lays out a closed-form solution Miller derived for the probability a d
 
 This solution is slow for large αB, and not straightforward to vectorize: notice that term that iterates from 0 to αB−1. If we run A/B tests with thousands of clicks, this step is going to constrain us (though it’s still usually faster than simulation or integration).
 
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%201.39.49%20PM.png?raw=true)
+
 ![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2012.56.32%20PM.png?raw=true)
 
 **Closed-form approximation**
 As this report points out, there’s a much faster approximation we can use. Notice that when αα and β are both fairly large, the beta starts looking a lot like a normal distribution, so much so that it can be closely approximated.
 
 ![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%2012.56.41%20PM.png?raw=true)
+
+![alt text](https://github.com/woburenshini/Avazu-Banner-Position-A-B-Testing-with-R/blob/master/Screen%20Shot%202018-02-18%20at%201.40.00%20PM.png?raw=true)
